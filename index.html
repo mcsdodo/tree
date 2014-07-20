@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="stylesheet" href="style.css" />
+  <script data-require="jquery@*" data-semver="2.1.1" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="template.js"></script>
+  <script src="tree.js"></script>
+  
+  <script type="text/javascript">
+    $(document).ready(function() {
+      var data = [{
+          id: 1,
+          label: "1",
+          children: [{
+            id: 2,
+            label: "1.1",
+            children: []
+          }, {
+            id: 3,
+            label: "1.2",
+            children: [{
+              id: 4,
+              label: "1.2.1"
+            }]
+          }]
+        }, {
+          id: 5,
+          label: "2",
+          children: [{
+            id: 6,
+            label: "2.1"
+          }]
+        }
+
+      ];
+
+      putInTree($("#tree"), data, 1);
+
+    });
+  </script>
+
+</head>
+
+<body>
+  <div class="tree" id="tree"></div>
+
+</body>
+
+</html>
